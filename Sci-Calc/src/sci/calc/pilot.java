@@ -9,28 +9,28 @@ import java.io.InputStream;
 
 /**
  *
- * @author sean
+ * @author Sean Garnett, Jacob Ogden
  */
 public class pilot {
     
     public static void main() {
-        int num1, num2, num3, num4 = 0;
-        Scanner in = new Scanner(System.in);
+        int num1, num2, num3 = 0;
+        String end = " ";
+        String compare = null;        Scanner in = new Scanner(System.in);
         
        
-        while(num4 != 1) {
-            System.out.print("Input first number:");
+        while(end.equals(" ")) {
+            System.out.print("Input first number: ");
             num1 = in.nextInt();
-            System.out.print("Input num 2:");
+            System.out.print("Input num 2: ");
             num2 = in.nextInt();
-            System.out.print("Operator:");
+            System.out.print("Operator: ");
             num3 = in.nextInt();
             System.out.println(lib.add(num1, num2));
             System.out.println("press 1 to exit");
-            num4 = in.nextInt();
+            end = in.next();
         }
         
-        // TODO code application logic here
     }
     
 }

@@ -7,7 +7,7 @@ package sci.calc;
 
 /**
  *
- * @author sean
+ * @author Sean Garnett, Jacob Ogden
  */
 public class lib {
     
