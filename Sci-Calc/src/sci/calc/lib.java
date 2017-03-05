@@ -11,28 +11,35 @@ package sci.calc;
  */
 public class lib {
     
-     public static int add(int a, int b) {
+     public static Integer add(int a, int b) {
         return a+b ;
     }
     
-    public static double add(double a, double b) {
+    public static Double add(double a, double b) {
         return a+b;
     }
     
-    public static int subtract(int a, int b) {
+    public static Integer subtract(int a, int b) {
         return a-b;
     }
     
-    public static double subtract(double a, double b) {
+    public static Double subtract(double a, double b) {
         return a-b;
     }
     
-    public static int multiply(int a, int b) {
+    public static Integer multiply(int a, int b) {
         return a*b;
     }
     
-    public static double multiply(double a, double b) {
+    public static Double multiply(double a, double b) {
         return a*b;
+    }
+    public static Integer divide(int a, int b) {
+        return a/b;
+    }
+    
+    public static Double divide(double a, double b) {
+        return a/b;
     }
     
 }
