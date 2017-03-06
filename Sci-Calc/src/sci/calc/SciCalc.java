@@ -14,7 +14,7 @@ public class SciCalc {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        pilot.main();
+        pilot.main2();
         // TODO code application logic here
     }
     

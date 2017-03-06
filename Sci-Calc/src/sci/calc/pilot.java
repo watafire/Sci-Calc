@@ -15,6 +15,27 @@ import java.io.InputStream;
  */
 public class pilot {
     
+    public static void main2() {
+        String command;
+        Scanner in = new Scanner(System.in);
+        
+        
+        System.out.print("Input command: ");
+        
+        while(!in.hasNext("exit")) {
+            command = in.next();
+            System.out.println(command);
+            
+            Scanner scanner = new Scanner(command);
+            
+            scanner.close();
+        }
+
+        
+        
+        in.close();
+        }
+    
     public static void main() {
         int iNum1, iNum2;
         double dNum1, dNum2;
@@ -91,7 +112,7 @@ public class pilot {
         operator.put("*", lib.multiply(num1, num2));
         operator.put("/", lib.divide(num1, num2));*/
         
-       
+       in.close();
     }
     
 }
