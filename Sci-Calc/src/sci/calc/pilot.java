@@ -15,21 +15,53 @@ import java.io.InputStream;
  */
 public class pilot {
     
+    
+    /*
+    * Using main2 in SciCalc
+    */
     public static void main2() {
         String command;
         Scanner in = new Scanner(System.in);
         
-        
         System.out.print("Input command: ");
         
-        while(!in.hasNext("exit")) {
-            command = in.next();
+        /*
+        *   Used a do while so that it can check the "in" scanner after the first input is ented
+        *   This way the while loop can check to scanner directly.
+        */
+        
+        do {
+            /*
+            *   command is used to store the command inputed so it can be parsed into multiple arrays.
+            *   This way the we can parse only the numbers or only the operations.
+            *   We also keep the order of both by their entry in the given arrays. 
+            *
+            *   Currently I need to write a TRY and Catch loop to deal with non-digit non-operator input
+            */
+            
+            command = in.nextLine();
+            
+            if (command.equals("exit")) {
+            break;
+            }
+            
             System.out.println(command);
+            String[] strngDigits = command.split("[+\\-*/\\^ ]+");
+            String[] operators = command.split("\\d");
+            Double[] digits = new Double[strngDigits.length];
             
-            Scanner scanner = new Scanner(command);
+            for (int i = 0; i < strngDigits.length; i++) {
+                digits[i] = Double.parseDouble(strngDigits[i]);
+            }
             
-            scanner.close();
-        }
+            for (int i = 0; i < digits.length; i++) {
+                System.out.println(digits[i]);   
+            }
+            
+            for (int i = 0; i < operators.length; i++){
+                System.out.println(operators[i]);
+            }
+        } while(!in.hasNext("exit"));
 
         
         
